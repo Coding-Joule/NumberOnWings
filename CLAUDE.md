@@ -45,8 +45,12 @@ transparent black drawing disappears against a dark browser tab.
 ## Structure
 
 - `/` &mdash; holding page while the rebuild happens.
-- `/next/` &mdash; the real homepage, in progress. Promoting it is a move to
-  the root with no link edits, because every asset path is root-relative.
+- `/next/` &mdash; the real homepage, in progress. It carries its own copy of
+  `iraconal.png` and links to it as a sibling. Promoting it is still a
+  move to the root with no link edits: a path is either root-relative or
+  relative to a file that travels with the page. The root copy is there
+  for the holding page and `nav.js`, and the `/next/` copy lands on top
+  of it when the move happens.
 - `404.html` &mdash; GitHub Pages serves this for any missing path.
 - `nav.js` &mdash; the nav is defined once here and injected into
   `<header class="nav">`. Links get added as pages come into existence.
