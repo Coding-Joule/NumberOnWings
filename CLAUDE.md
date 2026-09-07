@@ -74,15 +74,21 @@ text role clears 4.5:1 on its own surface.
 - [x] Polish
 - [x] Replace the questions with "what the heck is NumberOnWings?!" ones
 - [x] Delete unused branches, files and folders &mdash; no unused files or
-      folders exist. `claude/numberwings-repo-reset-cl02g8` was identical
-      to main and is deleted locally, but this environment's proxy refuses
-      remote ref deletions, so it has to be removed from the GitHub UI.
+      folders exist. Every `claude/*` branch is now disposable and gone
+      locally, but this environment's proxy refuses remote ref deletions
+      (403 on every delete push, and the GitHub tools here cannot delete a
+      branch either), so all three have to be removed from the GitHub UI:
+      `claude/numberonwings-next-assets-pua6d6`,
+      `claude/numberwings-repo-reset-cl02g8`,
+      `claude/homepage-design-nfu3z2`.
 
 ## Open
 
 - Nothing explains the name. A "why is it called NumberOnWings?" question
   belongs in the list, but the answer is not mine to invent.
-- `claude/homepage-design-nfu3z2` holds unmerged work from another
-  session: a different homepage, an `assets/` layout, `game.js`,
-  `problem.js`, `runaway.html`, `tools.html`. Kept deliberately.
+- `claude/homepage-design-nfu3z2` is no longer kept. It held the only copy
+  of an alternative homepage, an `assets/` layout, `game.js`, `problem.js`,
+  `tools.js`, `runaway.js` and a preview script &mdash; roughly 2,900 lines,
+  never merged. That was weighed and dropped rather than merged or
+  archived. Nothing on main depends on it.
 - The `archive/` branches are the way back to the original site. Keep.
